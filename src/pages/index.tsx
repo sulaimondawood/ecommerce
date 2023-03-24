@@ -1,5 +1,13 @@
+import Banner from "@/components/Banner";
+import BestSellers from "@/components/BestSellers";
+import Brands from "@/components/Brands";
+import Products from "@/components/Products";
 import Head from "next/head";
 
+import Img from "../assets/07.png";
+
+// import { Roboto } from "next/font/google";
+import { Footer, Hero, Nav } from "../components";
 export default function Home() {
   return (
     <>
@@ -10,7 +18,28 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+        <Nav></Nav>
+        <Hero />
+        <Brands />
+        <Products />
+        <Banner />
+        <BestSellers />
+
+        {/* follow? */}
+        <section className="py-28 bg-m-gray">
+          <h1 className="text-body text-center text-black ">
+            Follow products and discounts on Instagram
+          </h1>
+          <div className="grid py-10  max-w-6xl mx-auto  grid-cols-6 gap-6">
+            <img className="h-{200px]" src={Img.src} alt="" />
+            <img className="h-{200px]" src={Img.src} alt="" />
+            <img className="h-{200px]" src={Img.src} alt="" />
+            <img className="h-{200px]" src={Img.src} alt="" />
+            <img className="h-{200px]" src={Img.src} alt="" />
+            <img className="h-{200px]" src={Img.src} alt="" />
+          </div>
+        </section>
+        <Footer />
       </main>
     </>
   );

@@ -1,3 +1,6 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&family=Roboto:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,4 +15,9 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: white;
 }
