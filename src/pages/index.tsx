@@ -8,7 +8,10 @@ import Img from "../assets/07.png";
 
 // import { Roboto } from "next/font/google";
 import { Footer, Hero, Nav } from "../components";
-export default function Home() {
+import { GetStaticProps } from "next";
+import { client } from "@/lib/sanity";
+
+export default function Home({ hero, products }: any) {
   return (
     <>
       <Head>
@@ -19,14 +22,14 @@ export default function Home() {
       </Head>
       <main className="">
         <Nav></Nav>
-        <Hero />
+        <Hero hero={hero} />
         <Brands />
-        <Products />
+        <Products products={products} />
         <Banner />
-        <BestSellers />
+        {/* <BestSellers /> */}
 
         {/* follow? */}
-        <section className="py-28 bg-m-gray">
+        {/* <section className="py-28 bg-m-gray">
           <h1 className="text-body text-center text-black ">
             Follow products and discounts on Instagram
           </h1>
@@ -38,9 +41,21 @@ export default function Home() {
             <img className="h-{200px]" src={Img.src} alt="" />
             <img className="h-{200px]" src={Img.src} alt="" />
           </div>
-        </section>
+        </section> */}
         <Footer />
       </main>
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const hero = await client.fetch(`*[_type == "banner"]`);
+  console.log(hero);
+  const products = await client.fetch(`*[_type == 'products']`);
+  return {
+    props: {
+      hero,
+      products,
+    },
+  };
+};

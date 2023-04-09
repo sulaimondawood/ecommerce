@@ -18,7 +18,7 @@ const Brands = () => {
         <img className="" src={Brand5.src} alt="" />
       </div>
 
-      <div className="flex gap-5 mx-auto relative max-w-6xl">
+      {/* <div className="flex gap-5 mx-auto relative max-w-6xl">
         <h1 className="-rotate-90 absolute -left-44 top-1/2 -translate-y-1/2 text-head5">
           Explore New and Popular Styles
         </h1>
@@ -50,7 +50,7 @@ const Brands = () => {
             alt=""
           />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

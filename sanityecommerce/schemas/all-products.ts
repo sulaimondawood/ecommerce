@@ -23,13 +23,14 @@ export default {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'title',
       },
     },
     {
       name: 'image',
       title: 'Image',
-      type: 'image',
+      type: 'array',
+      of: [{type: 'image'}],
     },
   ],
 }

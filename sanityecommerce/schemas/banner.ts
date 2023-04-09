@@ -4,18 +4,25 @@ export default {
   type: 'document',
   fields: [
     {
-      title: 'Slug',
-      name: 'slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-      },
-    },
-    {
       title: 'Text',
       name: 'text',
       type: 'string',
     },
+    {
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'text',
+      },
+    },
+
+    {
+      title: 'Desc',
+      name: 'desc',
+      type: 'string',
+    },
+
     {
       title: 'Image',
       name: 'image',
