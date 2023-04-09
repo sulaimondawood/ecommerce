@@ -7,8 +7,7 @@ export const client = createClient({
   dataset: "production",
   apiVersion: "2023-04-08",
   token: process.env.SANITY_API_TOKEN,
-  //   token:
-  //     "skxudVPcCLxtifq6PvpS93ictFmwVQUgAltxhGrFoIVhKPAvKIL65xFw5caJnUYVJRLNsJastFFRg13sqtGTVq6z33x4jZsIDbN42TgPmVdJVjfiuYw6iKuBjzBpUVilXCaDuKRxUbODY9MPyVp1ejJ3D33sVRf7Twx3YjDJuHkI3z4O3ALt",
+
   useCdn: false,
 });
 
